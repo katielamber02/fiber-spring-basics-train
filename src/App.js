@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+
 import "./App.css";
 import { Canvas } from "react-three-fiber";
 import { Box } from "./Box";
@@ -10,10 +10,11 @@ function App() {
   return (
     <div className="App">
       MY TEXT
-      <Canvas>
-        <Plane />
+      <Canvas camera={{ position: [0, 0, 5] }}>
+        <fog attach="fog" args={["white", 5, 15]} />
         <Controls />
         <Box />
+        <Plane />
       </Canvas>
     </div>
   );

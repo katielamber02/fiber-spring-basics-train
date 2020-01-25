@@ -1,10 +1,8 @@
-import React, { useState, useRef } from "react";
-import { useSpring, a } from "react-spring/three";
-import { extend, useThree, useFrame } from "react-three-fiber";
+import React from "react";
 
 export const Plane = () => (
-  <mesh>
+  <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, 0]}>
     <planeBufferGeometry attach="geometry" args={[100, 100]} />
-    <meshPhysicalMaterial attach="material" color="white" />
+    <meshPhysicalMaterial attach="material" color="red" />
   </mesh>
 );

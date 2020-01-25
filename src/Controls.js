@@ -1,6 +1,6 @@
-import React, { useState, useRef } from "react";
-import { useSpring, a } from "react-spring/three";
+import React, { useRef } from "react";
 import { extend, useThree, useFrame } from "react-three-fiber";
+
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 extend({ OrbitControls });

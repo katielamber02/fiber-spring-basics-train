@@ -1,6 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { useSpring, a } from "react-spring/three";
-import { extend, useThree, useFrame } from "react-three-fiber";
 
 export const Box = () => {
   //const myRef = useRef();
@@ -22,8 +21,8 @@ export const Box = () => {
       onClick={() => setActive(!active)}
       scale={props.scale}
     >
-      <ambientLight />
-      <spotLight position={[0, 5, 10]} />
+      {/* <ambientLight /> */}
+      <spotLight position={[0, 5, 10]} penumbra={1} />
       <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
       {/* <a.meshBasicMaterial attach="material" color={props.color} /> */}
       <a.meshPhysicalMaterial attach="material" color={props.color} />
