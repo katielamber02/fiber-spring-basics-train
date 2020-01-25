@@ -11,7 +11,15 @@ const Controls = () => {
   useFrame(() => {
     orbitRef.current.update();
   });
-  return <orbitControls args={[camera, gl.domElement]} ref={orbitRef} />;
+  return (
+    <orbitControls
+      autoRotate
+      args={[camera, gl.domElement]}
+      ref={orbitRef}
+      maxPolarAngle={Math.PI / 3} // rotates only left and right
+      minPolarAngle={Math.PI / 2} //
+    />
+  );
 };
 
 export const Box = () => {
@@ -34,8 +42,11 @@ export const Box = () => {
       scale={props.scale}
     >
       <Controls />
+      <ambientLight />
+      <spotLight position={[0, 5, 10]} />
       <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
-      <a.meshBasicMaterial attach="material" color={props.color} />
+      {/* <a.meshBasicMaterial attach="material" color={props.color} /> */}
+      <a.meshPhysicalMaterial attach="material" color={props.color} />
     </a.mesh>
   );
 };
