@@ -9,8 +9,7 @@ import * as THREE from "three";
 
 function App() {
   return (
-    <div className="App">
-      MY TEXT
+    <>
       <Canvas
         camera={{ position: [0, 0, 5] }}
         onCreated={({ gl }) => {
@@ -23,7 +22,8 @@ function App() {
         <Box />
         <Plane />
       </Canvas>
-    </div>
+      <h1>hello</h1>
+    </>
   );
 }
 

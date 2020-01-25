@@ -17,7 +17,7 @@ export const Controls = () => {
       args={[camera, gl.domElement]}
       ref={orbitRef}
       maxPolarAngle={Math.PI / 3} // rotates only left and right
-      minPolarAngle={Math.PI / 2} //
+      minPolarAngle={Math.PI / 3} //
     />
   );
 };

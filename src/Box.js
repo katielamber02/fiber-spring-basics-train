@@ -7,7 +7,7 @@ export const Box = () => {
   const [active, setActive] = useState(false);
   const props = useSpring({
     scale: active ? [1.5, 1.5, 1.5, 1.5] : [1, 1, 1, 1],
-    color: hovered ? "aqua" : "grey"
+    color: hovered ? "aqua" : "green"
   });
   // useFrame(() => {
   //   myRef.current.rotation.y += 0.01;
